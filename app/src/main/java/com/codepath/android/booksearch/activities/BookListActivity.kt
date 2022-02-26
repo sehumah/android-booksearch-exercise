@@ -42,7 +42,6 @@ class BookListActivity : AppCompatActivity() {
         val toolbar = Toolbar(this).findViewById<Toolbar>(R.id.toolbar)  // Find the toolbar view inside the activity layout
         setSupportActionBar(toolbar)  // Set the Toolbar  to act as the ActionBar for this Activity window & Make sure the toolbar exists in the activity and is not null
 
-
         // Initialize the adapter
         bookAdapter = BookAdapter(this, booksList)
         bookAdapter.setOnItemClickListener (object : OnItemClickListener {
