@@ -6,7 +6,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
-import android.widget.Toolbar
+//import android.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.MenuItemCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -38,8 +39,9 @@ class BookListActivity : AppCompatActivity() {
         // Checkpoint #3
         // Switch Activity to Use a Toolbar
         // see http://guides.codepath.org/android/Using-the-App-ToolBar#using-toolbar-as-actionbar
-        val toolbar = Toolbar(this).findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        val toolbar = Toolbar(this).findViewById<Toolbar>(R.id.toolbar)  // Find the toolbar view inside the activity layout
+        setSupportActionBar(toolbar)  // Set the Toolbar  to act as the ActionBar for this Activity window & Make sure the toolbar exists in the activity and is not null
+
 
         // Initialize the adapter
         bookAdapter = BookAdapter(this, booksList)
